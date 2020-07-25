@@ -1,0 +1,51 @@
+.cardTop {
+    padding: 10px;
+}
+
+.noBorder {
+    border: none !important;
+}
+
+.grid {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topNumber {
+    font-size: 22px;
+    font-weight: 500;
+    color: black;
+}
+
+.topCardImg {
+    max-width: 102px;
+}
+
+.checked {
+    color: orange !important;
+}
+
+.text-muted {
+    color: #a4abc5;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: #fbfbfb;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    height: 13px;
+  }
+  
+#myBar {
+    width: 71%;
+    height: 13px;
+    background-color: orange;
+    border-radius: 20px;
+}

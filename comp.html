@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Questionnaire Form">
+    <meta name="author" content="Ansonika">
+    <title>Questionnaire Form Wizard by Ansonika</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="#">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="#">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="comp_files/css.css" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="comp_files/bootstrap.css" rel="stylesheet">
+	<link href="comp_files/menu.css" rel="stylesheet">
+    <link href="comp_files/style.css" rel="stylesheet">
+	<link href="comp_files/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="comp_files/custom.css" rel="stylesheet">
+	
+	<!-- MODERNIZR MENU -->
+	<script src="comp_files/modernizr.js"></script>
+
+</head>
+
+<body style="overflow: visible;">
+	
+	<div id="preloader" style="display: none;">
+		<div data-loader="circle-side" style="display: none;"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<header>
+		<div class="container">
+		    <div class="row">
+                <div class="col-3">
+                     <a href="http://www.ansonika.com/magnifica/index.html"><img src="comp_files/logo.svg" alt="" class="d-none d-md-block" width="178" height="45"><img src="comp_files/logo_mobile.svg" alt="" class="d-block d-md-none" width="62" height="45"></a>
+                </div>
+                <div class="col-9">
+                    <div id="social">
+                        <ul>
+                            <li><a href="#0"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#0"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#0"><i class="icon-google"></i></a></li>
+                            <li><a href="#0"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /social -->
+					<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+					<!-- /menu button -->
+                    <nav>
+						<ul class="cd-primary-nav">
+							<li><a href="http://www.ansonika.com/magnifica/index.html" class="animated_link">Questionnaire</a></li>
+							<li><a href="http://www.ansonika.com/magnifica/prevention.html" class="animated_link">Prevention Tips</a></li>
+							<li><a href="http://www.ansonika.com/magnifica/faq.html" class="animated_link">Faq</a></li>
+							<li><a href="http://www.ansonika.com/magnifica/contacts.html" class="animated_link">Contact Us</a></li>
+							<li><a href="https://1.envato.market/OAmnr" class="animated_link" target="_parent">Purchase Template</a></li>
+						</ul>
+					</nav>
+					<!-- /menu -->
+                </div>
+            </div>
+		</div>
+		<!-- /container -->
+	</header>
+	<!-- /Header -->
+
+	<div class="container">
+    <div id="form_container">
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <div id="left_form">
+                    <figure><img src="comp_files/info_graphic_1.svg" alt="" width="100" height="100"></figure>
+                    <h2>CORONAVIRUS <span>Health Questionnaire</span></h2>
+                    <p>Help yourself in decision-making whether to seek professional medical advice or not.</p>
+                    <a href="https://1.envato.market/OAmnr" class="btn_1 rounded yellow purchase" target="_parent">Purchase this template</a>
+	                <a href="#wizard_container" class="btn_1 rounded mobile_btn yellow">Start Now!</a>
+                    <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div id="wizard_container" class="wizard" novalidate="novalidate">
+                    <div id="top-wizard">
+                        <div id="progressbar" class="ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="ui-progressbar-value ui-widget-header ui-corner-left" style="display: none; width: 0%;"></div></div>
+                        <span id="location"></span>
+                    </div>
+                    <!-- /top-wizard -->
+                    <form id="wrapped" method="post" class="fl-form fl-style-1 wizard-form" action="#">
+                        <input id="website" name="website" type="text">
+                        <!-- Leave for security protection, read docs for details -->
+                        <div id="middle-wizard" class="wizard-branch wizard-wrapper">
+
+                            <div class="step wizard-step current" style="">
+                                <h3 class="main_question wizard-header"><i class="arrow_right"></i>Company Details</h3>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group add_top_30">
+                                            <div class="fl-wrap fl-wrap-input fl-is-required"><label for="name" class="fl-label">Company Name</label><input type="text" name="name" id="name" class="form-control required fl-input" onchange="getVals(this, 'name_field');" placeholder="Company Name" ></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="fl-wrap fl-wrap-input fl-is-required"><label for="email" class="fl-label">Email address</label><input type="email" name="email" id="email" class="form-control required fl-input" onchange="getVals(this, 'email_field');" placeholder="Email Address"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="fl-wrap fl-wrap-input fl-is-required"><label for="phone" class="fl-label">Contact Number</label><input type="text" name="phone" id="phone" class="form-control required fl-input" placeholder="Contact Number"></div>
+                                        </div>
+                                        <label>Number of employees:</label>
+                                        <div class="form-group">
+                                            <label class="container_radio version_2">Less than 10
+                                                <input type="radio" name="availability" value="Full-time" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio version_2">Between 10 and 20
+                                                <input type="radio" name="availability" value="Part-time" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio version_2">Between 20 and 100
+                                                <input type="radio" name="availability" value="Freelance-Contract" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio version_2">More than 100
+                                                <input type="radio" name="availability" value="Freelance-Contract" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group add_top_30" style="display: flex;">
+                                            <div style="display: inline-block; margin-right: 5px;" class="fl-wrap fl-wrap-input fl-is-required"><label for="years" class="fl-label">Years in operation</label><input type="text" name="years" id="years" class="form-control required fl-input" onchange="getVals(this, 'years_field');" placeholder="Years in operation" ></div>
+                                            <div style="display: inline-block;" class="fl-wrap fl-wrap-input fl-is-required"><label for="branches" class="fl-label">Total branches</label><input type="text" name="branches" id="branches" class="form-control required fl-input" onchange="getVals(this, 'branches_field');" placeholder="Total branches" ></div>
+                                        </div>
+                                        <div class="form-group add_top_30">
+                                            <div class="fl-wrap fl-wrap-input fl-is-required"><label for="expertise" class="fl-label">Expertise areas</label><input type="text" name="expertise" id="expertise" class="form-control required fl-input" onchange="getVals(this, 'expertise_field');" placeholder="Expertise areas" ></div>
+                                        </div>
+                                        <div class="form-group add_top_30">
+                                            <div class="fl-wrap fl-wrap-input fl-is-required"><label for="country" class="fl-label">Country</label><input type="text" name="country" id="country" class="form-control required fl-input" onchange="getVals(this, 'country_field');" placeholder="Country" ></div>
+                                        </div>
+                                        <div class="form-group add_top_30" style="display: flex;">
+                                            <div style="display: inline-block; margin-right: 5px;" class="fl-wrap fl-wrap-input fl-is-required"><label for="state" class="fl-label">State</label><input type="text" name="state" id="state" class="form-control required fl-input" onchange="getVals(this, 'state_field');" placeholder="State" ></div>
+                                            <div style="display: inline-block;" class="fl-wrap fl-wrap-input fl-is-required"><label for="zip" class="fl-label">Zip/Province</label><input type="text" name="zip" id="zip" class="form-control required fl-input" onchange="getVals(this, 'zip_field');" placeholder="Zip/Province" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                            </div>
+                            <!-- /step-->
+
+                            <div class="step wizard-step" style="display: none;">
+                                <h3 class="main_question"><i class="arrow_right"></i>Contact Details</h3>
+                                <div class="form-group add_top_30">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="name1" class="fl-label">Contact Person 1</label><input type="text" name="name1" id="name1" class="form-control required fl-input" placeholder="Contact Person 1" ></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="email1" class="fl-label">Contact Person 1 Email</label><input type="email1" name="email" id="email1" class="form-control required fl-input" placeholder="Contact Person 1 Email"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="phone1" class="fl-label">Contact Person 1 Designation</label><input type="text" name="phone1" id="phone1" class="form-control required fl-input" placeholder="Contact Person 1 Designation"></div>
+                                </div>
+                                <div class="form-group add_top_30">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="name2" class="fl-label">Contact Person 2</label><input type="text" name="name2" id="name2" class="form-control required fl-input" placeholder="Contact Person 2" ></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="email2" class="fl-label">Contact Person 2 Email</label><input type="email" name="email2" id="email2" class="form-control required fl-input" placeholder="Contact Person 2 Email"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="phone2" class="fl-label">Contact Person 2 Designation</label><input type="text" name="phone2" id="phone2" class="form-control required fl-input" placeholder="Contact Person 2 Designation"></div>
+                                </div>
+                            </div>
+                            <!-- /step-->
+
+                            <!-- /Start Branch ============================== -->
+                            <div class="step wizard-step" style="display: none;">
+                                <label class="custom add_top_10"></label>
+                                <h3 class="main_question"><i class="arrow_right"></i>Social Details</h3>
+                                <div class="form-group add_top_30">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="fb" class="fl-label">Facebook</label><input type="text" name="fb" id="fb" class="form-control required fl-input" placeholder="Facebook" ></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="li" class="fl-label">LinkedIn</label><input type="text" name="li" id="li" class="form-control required fl-input" placeholder="LinkedIn"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fl-wrap fl-wrap-input fl-is-required"><label for="tw" class="fl-label">Twitter</label><input type="text" name="tw" id="tw" class="form-control required fl-input" placeholder="Twitter"></div>
+                                </div>
+                            </div>
+
+                            <div class="step wizard-step" style="display: none;">
+                                <h3 class="main_question"><i class="arrow_right"></i>How did you hear about our company?</h3>
+                                <div class="form-group">
+                                    <label class="container_radio version_2">Google
+                                        <input type="radio" name="availability" value="Full-time" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio version_2">From a friend
+                                        <input type="radio" name="availability" value="Part-time" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio version_2">Email
+                                        <input type="radio" name="availability" value="Freelance-Contract" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio version_2">Facebook
+                                        <input type="radio" name="availability" value="Freelance-Contract" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio version_2">Others
+                                        <input type="radio" name="availability" value="Freelance-Contract" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- /step-->
+
+                            <div class="submit step wizard-step" id="end" style="display: none;">
+                                <div class="summary">
+                                    <div class="wrapper">
+                                        <h3>Thank your for your time<br><span id="name_field"></span>!</h3>
+                                        <p>We will contact you shorly at the following email address <strong id="email_field"></strong> and if necessary take measures.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="form-group terms">
+                                            <label class="container_check">Please accept our <a href="#" data-toggle="modal" data-target="#terms-txt">Terms and conditions</a> before Submit
+                                                <input type="checkbox" name="terms" value="Yes" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /step last-->
+
+                        </div>
+                        <!-- /middle-wizard -->
+                        <div id="bottom-wizard">
+                            <button type="button" name="backward" class="backward" disabled="disabled">Prev</button>
+                            <button type="button" name="forward" class="forward">Next</button>
+                            <button type="submit" name="process" class="submit" disabled="disabled">Submit</button>
+                        </div>
+                        <!-- /bottom-wizard -->
+                    </form>
+                </div>
+                <!-- /Wizard container -->
+            </div>
+        </div><!-- /Row -->
+    </div><!-- /Form_container -->
+</div>
+<!-- /container -->
+
+<div class="cd-overlay-nav">
+    <span class="" style="transform: scaleX(0) scaleY(0); height: 3219.04px; width: 3219.04px; top: -1609.52px; left: -1609.52px;"></span>
+</div>
+<!-- /cd-overlay-nav -->
+<div class="cd-overlay-content">
+    <span class="" style="transform: scaleX(0) scaleY(0); height: 3219.04px; width: 3219.04px; top: -1609.52px; left: -1609.52px;"></span>
+</div>
+<!-- /cd-overlay-content -->
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod 
+novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore 
+postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. 
+Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in 
+nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis 
+meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt 
+sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod 
+novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore 
+postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- Modal info -->
+	<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="more-infoLabel">Frequently asked questions</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod 
+novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore 
+postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. 
+Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in 
+nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis 
+meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt 
+sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod 
+novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore 
+postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="comp_files/jquery-3.js"></script>
+    <script src="comp_files/common_scripts.js"></script>
+	<script src="comp_files/velocity.js"></script>
+	<script src="comp_files/common_functions.js"></script>
+
+	<!-- Wizard script-->
+	<script src="comp_files/func_1.js"></script>
+
+
+</body></html>
